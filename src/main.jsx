@@ -1,10 +1,11 @@
-import React from "react";
+import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import { CountriesProvider } from "./Contexts/CountriesContext";
 import "./index.css";
 import Country from "./pages/Country";
-
+export const CountriesContext = createContext([]);
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +18,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <CountriesProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </CountriesProvider>
 );
