@@ -68,7 +68,7 @@ function App() {
   const { countriesList } = useContext(CountryContext);
 
   function handleClick(country) {
-    navigate(`/country/${country.flag}`);
+    navigate(`/country/${country.cca2}`);
   }
 
   return (
