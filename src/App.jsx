@@ -8,10 +8,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #ededed;
 `;
 
-const NavBar = styled.div`
+export const NavBar = styled.div`
   display: flex;
+  color: white;
+  background-color: #212e37;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -26,7 +29,7 @@ const NavBar = styled.div`
 const Content = styled.div`
   padding-top: 50px;
   display: flex;
-  background-color: #f3f3f3;
+  background-color: #212e37;
   height: 100%;
   flex-wrap: wrap;
   padding-inline: 100px;
@@ -37,6 +40,7 @@ const Content = styled.div`
 const Country = styled.div`
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   width: 250px;
   & img {
     width: 250px;
@@ -45,7 +49,7 @@ const Country = styled.div`
   }
 
   & .country-info {
-    background-color: white;
+    background-color: hsl(204.54545454545456, 25%, 20.254901960784313%);
     max-width: 100%;
     display: flex;
     flex-direction: column;
